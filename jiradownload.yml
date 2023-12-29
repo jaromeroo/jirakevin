@@ -31,6 +31,6 @@
         body_format: json
         headers:
           X-Atlassian-Token: nocheck       
-        src: "file=@'jiradownload.yml'"
+        src: "jiradownload.yml'"
         validate_certs: no
       register: result
