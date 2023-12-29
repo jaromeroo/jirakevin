@@ -1,0 +1,18 @@
+---
+- name: Conexion local
+  hosts: localhost
+  gather_facts: false
+  tasks:
+
+    - name: connecting to jira
+      uri:
+      url: https://jira.global.xxxxxx.com
+      user: '{{user name}}'
+      password: '{{password}}'
+      method: GET
+      return_content: yes
+      status_code: 200
+      register: Status
+
+    - debug:
+        var: Status.stdout_lines
