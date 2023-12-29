@@ -25,18 +25,17 @@
       register: partition_log_1
 
     - name: Create Jira Project
-      uri:
-        user: 'jaromero@redhat.com'
-        password: 'ATATT3xFfGF0i6wcMbSPkTGWMbvnP6G6oZgvggji9xzgypOAdY0IUr3oibNPfodwAvOAamj9nJMS--MyoM8L1PINKU93TQwKH_4pqX3EeTyoRRYTmgch2ejNfzoJOpWmPeEY9ZM5FVeRWugiHPV9p1TMkTUjlBM8-Y3jM9Z791w3c02_-0aTQs4=FA3E0386'
+      uri:        
         url: 'https://invk2.atlassian.net/rest/api/3/issue/10000/attachments'
-        validate_certs: yes
         method: POST
-        headers:
-          X-Atlassian-Token: nocheck
-        force_basic_auth: yes
-        body_format: form-multipart
         body:
           file:
-            content: "{{ lookup('file','texttest.txt') }}"
-            filename: texttest.txt 
+            filename: 'texttest.txt'
+          comment:
+            content: 'File attached via REST API'
+        body_format: form-multipart
+        headers:
+          X-Atlassian-Token: nocheck
+        url_username: jaromero@redhat.com
+        url_password: ATATT3xFfGF0i6wcMbSPkTGWMbvnP6G6oZgvggji9xzgypOAdY0IUr3oibNPfodwAvOAamj9nJMS--MyoM8L1PINKU93TQwKH_4pqX3EeTyoRRYTmgch2ejNfzoJOpWmPeEY9ZM5FVeRWugiHPV9p1TMkTUjlBM8-Y3jM9Z791w3c02_-0aTQs4=FA3E0386
       register: result
