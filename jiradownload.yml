@@ -28,17 +28,17 @@
         password: "ATATT3xFfGF0i6wcMbSPkTGWMbvnP6G6oZgvggji9xzgypOAdY0IUr3oibNPfodwAvOAamj9nJMS--MyoM8L1PINKU93TQwKH_4pqX3EeTyoRRYTmgch2ejNfzoJOpWmPeEY9ZM5FVeRWugiHPV9p1TMkTUjlBM8-Y3jM9Z791w3c02_-0aTQs4=FA3E0386"
         return_content: yes
         force_basic_auth: yes
-        # body_format: json
-        # headers:
-        #   Accept: 'application/json'
-        #   Content-Type: 'application/json'
-        # body: "{ 'key': '{{ app_code + kapp }}',
-        #          'name': '{{ project_name }}',
-        #          'projectTypeKey': 'software',
-        #          'projectTemplateKey': 'com.example.plugins.tutorial.my-project-template:my-project-template',
-        #          'description': 'Project created using Ansible playbook',
-        #          'lead': '{{ project_lead }}',
-        #          'assigneeType': 'PROJECT_LEAD',
-        #          }"
+        body_format: json
+        headers:
+          Accept: 'application/json'
+          Content-Type: 'application/json'
+        body: "{ 'key': '{{ app_code + kapp }}',
+                 'name': '{{ project_name }}',
+                 'projectTypeKey': 'software',
+                 'projectTemplateKey': 'com.example.plugins.tutorial.my-project-template:my-project-template',
+                 'description': 'Project created using Ansible playbook',
+                 'lead': '{{ project_lead }}',
+                 'assigneeType': 'PROJECT_LEAD',
+                 }"
         status_code: 201
       register: result
