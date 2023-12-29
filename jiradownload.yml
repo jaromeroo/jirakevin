@@ -15,7 +15,7 @@
     #   register: Status
 
     - uri: 
-        url: https://your.jira.example.com/rest/api/2/issue/ 
+        url: https://invk2.atlassian.net/rest/api/3/issue/10000/attachments
         method: POST 
         user: jaromero@redhat.com
         password: ATATT3xFfGF0i6wcMbSPkTGWMbvnP6G6oZgvggji9xzgypOAdY0IUr3oibNPfodwAvOAamj9nJMS--MyoM8L1PINKU93TQwKH_4pqX3EeTyoRRYTmgch2ejNfzoJOpWmPeEY9ZM5FVeRWugiHPV9p1TMkTUjlBM8-Y3jM9Z791w3c02_-0aTQs4=FA3E0386
