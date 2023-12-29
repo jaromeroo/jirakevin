@@ -27,8 +27,7 @@
     - name: Create Jira Project
       uri:        
         url: 'https://invk2.atlassian.net/rest/api/3/issue/10000/attachments'
-        method: POST  
-        body_format: form-multipart        
+        method: POST            
         headers:
           Content-Type: "application/xml"
           X-Atlassian-Token: nocheck
