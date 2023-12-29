@@ -28,5 +28,6 @@
       uri:        
         url: 'https://invk2.atlassian.net/rest/api/3/issue/10000/attachments'
         method: GET
+        status_code: [200, 201]
         headers:
           Authorization: 'Basic a3phdmFsYUByZWRoYXQuY29tOkFUQVRUM3hGZkdGMHoxVU5pQWd2a0t1Z1NCbGRBNnlXS3ZMSU52cVF6MEdwQ1NSWU9aeGNaUXFDVUhYeHFCWlhzamsxYnJzTl9udThhSnl3WFI1SFZMckZJNXlENVpnaG5EMmtoMkpYQ1FsckJDRUpNLU9UN1pkMFRyeEdLREczRV93LWx0NVMtei1WNjVGZDhpRWQxbGZETnFLbkl5WUZRbF9oUWdzV0RYRDdCd1BtYUt4eEtOYz01NDI3QTBDNw=='
