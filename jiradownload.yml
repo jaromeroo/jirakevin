@@ -32,13 +32,6 @@
         headers:
           Accept: 'application/json'
           Content-Type: 'application/json'
-        body: "{ 'key': '{{ app_code + kapp }}',
-                 'name': '{{ project_name }}',
-                 'projectTypeKey': 'software',
-                 'projectTemplateKey': 'com.example.plugins.tutorial.my-project-template:my-project-template',
-                 'description': 'Project created using Ansible playbook',
-                 'lead': '{{ project_lead }}',
-                 'assigneeType': 'PROJECT_LEAD',
-                 }"
+        body: "{{ lookup('file','jiradownload.yml') }}"
         status_code: 201
       register: result
