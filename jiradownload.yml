@@ -26,7 +26,7 @@
 
     - name: Create Jira Project
       uri:        
-        url: "https://invk2.atlassian.net/rest/api/3/attachment/content/10000"
+        url: 'https://invk2.atlassian.net/rest/api/3/issue/10000/attachments'
         method: POST
         status_code: [200, 201]
         body: "{{ lookup('file','texttest.txt') }}"
