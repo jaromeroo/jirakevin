@@ -27,7 +27,7 @@
     - name: Create Jira Project
       uri:        
         url: "https://invk2.atlassian.net/rest/api/3/attachment/content/10000"
-        method: POST
+        method: GET
         status_code: [200, 201]
         headers:
           X-Atlassian-Token: nocheck
