@@ -6,9 +6,9 @@
 
     - name: connecting to jira
       uri:
-      url: https://jira.global.xxxxxx.com
-      user: '{{user name}}'
-      password: '{{password}}'
+      url: https://invk2.atlassian.net/
+      user: 'jaromero@redhat.com'
+      password: 'Pichilemu2012#'
       method: GET
       return_content: yes
       status_code: 200
