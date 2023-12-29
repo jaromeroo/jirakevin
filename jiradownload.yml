@@ -19,6 +19,7 @@
     #     body: "{{ lookup('file','jiradownload.yml') }}" 
     #     method: POST 
     #     force_basic_auth: yes
+
     - name: listado de volumnes log
       ansible.builtin.shell: "df -h >> texttest.txt"
       register: partition_log_1
@@ -26,13 +27,9 @@
     - name: Create Jira Project
       uri:                       
         url: "https://invk2.atlassian.net/rest/api/3/issue/10000/attachments"
-        method: POST
-        return_content: yes
-        force_basic_auth: yes
-        body_format: json
+        method: POST        
         headers:
           Authorization: 'Basic a3phdmFsYUByZWRoYXQuY29tOkFUQVRUM3hGZkdGMHoxVU5pQWd2a0t1Z1NCbGRBNnlXS3ZMSU52cVF6MEdwQ1NSWU9aeGNaUXFDVUhYeHFCWlhzamsxYnJzTl9udThhSnl3WFI1SFZMckZJNXlENVpnaG5EMmtoMkpYQ1FsckJDRUpNLU9UN1pkMFRyeEdLREczRV93LWx0NVMtei1WNjVGZDhpRWQxbGZETnFLbkl5WUZRbF9oUWdzV0RYRDdCd1BtYUt4eEtOYz01NDI3QTBDNw=='
           X-Atlassian-Token: nocheck       
-        src: "texttest.txt"
-        validate_certs: no
+        src: "texttest.txt"        
       register: result
